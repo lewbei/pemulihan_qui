@@ -15,7 +15,7 @@
 
 ## Installation
 
-### Quick Install (Global)
+### Quick Install (Global) - Recommended
 
 Install globally to use anywhere on your system:
 
@@ -25,6 +25,8 @@ kuiz-adventure
 ```
 
 Then open your browser to `http://localhost:8000`
+
+**Note:** This package is designed for **global installation only**. Always use the `-g` flag when installing.
 
 ### Prerequisites
 - Node.js 14.0.0 or higher
