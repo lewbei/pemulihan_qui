@@ -2,6 +2,8 @@
 
 3+ Years of Educational Quizzes for Malaysian Primary School Students
 
+> ⚠️ **Note:** Some quiz questions are still under review and checking. Content accuracy is being continuously improved.
+
 ## Features
 
 - 🎯 **Multi-Profile System** - Track progress for multiple students
