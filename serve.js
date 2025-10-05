@@ -3,6 +3,7 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { exec } from 'child_process';
 
 const PORT = process.env.PORT || 8000;
 const __filename = fileURLToPath(import.meta.url);
@@ -89,12 +90,38 @@ function streamFile(filePath, res) {
     });
 }
 
+// Function to open browser automatically
+function openBrowser(url) {
+    const platform = process.platform;
+    let command;
+    
+    if (platform === 'win32') {
+        command = `start ${url}`;
+    } else if (platform === 'darwin') {
+        command = `open ${url}`;
+    } else {
+        command = `xdg-open ${url}`;
+    }
+    
+    exec(command, (error) => {
+        if (error) {
+            console.log(`\n⚠️  Could not open browser automatically.`);
+            console.log(`   Please open manually: ${url}\n`);
+        }
+    });
+}
+
 server.listen(PORT, () => {
+    const url = `http://localhost:${PORT}`;
     console.log(`\n✓ Kuiz Adventure MEGA server started successfully!`);
     console.log(`\n📚 Access the quiz at:`);
-    console.log(`   → http://localhost:${PORT}/kuiz_game.html`);
-    console.log(`   → http://localhost:${PORT}`);
-    console.log(`\n💡 Press Ctrl+C to stop the server\n`);
+    console.log(`   → ${url}/kuiz_game.html`);
+    console.log(`   → ${url}`);
+    console.log(`\n💡 Press Ctrl+C to stop the server`);
+    console.log(`\n🌐 Opening browser...\n`);
+    
+    // Open browser after a short delay to ensure server is ready
+    setTimeout(() => openBrowser(url), 1000);
 });
 
 // Graceful shutdown handling

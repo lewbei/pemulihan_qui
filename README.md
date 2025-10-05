@@ -28,6 +28,11 @@ Then open your browser to `http://localhost:8000`
 
 **Note:** This package is designed for **global installation only**. Always use the `-g` flag when installing.
 
+**🎉 Desktop Shortcut:** After installation, a shortcut will be created on your desktop:
+- **macOS:** `Kuiz Adventure.command` - Double-click to launch
+- **Windows:** `Kuiz Adventure.bat` - Double-click to launch  
+- **Linux:** `kuiz-adventure.desktop` - Double-click to launch
+
 ### Prerequisites
 - Node.js 14.0.0 or higher
 - npm (usually comes with Node.js)
