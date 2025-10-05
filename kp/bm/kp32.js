@@ -1,0 +1,248 @@
+// KP32 — Perkataan KVKK + V + KVKK
+
+const BM_KP32 = {
+    id: 'bm-kp32',
+    code: 'KP32',
+    name: 'KP32 — Perkataan KVKK + V + KVKK',
+    description: '*Perkataan KVKK + V + KVKK (kontraksi, komprehensif, komplementari, konspirasi)*',
+    category: 'bm',
+    questionBank: [
+        // Reading words with KVKK + V + KVKK pattern
+        { q: "Baca perkataan: kontraksi", a: "kontraksi", opts: ['kontraksi', 'ontrakasi', 'trakasi', 'ntrak'] },
+        { q: "Baca perkataan: komprehensif", a: "komprehensif", opts: ['komprehensif', 'omprehens', 'mprehens', 'mpreh'] },
+        { q: "Baca perkataan: komplementari", a: "komplementari", opts: ['komplementari', 'omplementa', 'mplement', 'plem'] },
+        { q: "Baca perkataan: konspirasi", a: "konspirasi", opts: ['konspirasi', 'onspirasi', 'nspirasi', 'spirasi'] },
+        { q: "Baca perkataan: komitmen", a: "komitmen", opts: ['komitmen', 'omitmen', 'mitmen', 'tmen'] },
+        { q: "Baca perkataan: kontinjen", a: "kontinjen", opts: ['kontinjen', 'ontinje', 'tinjen', 'nkonti'] },
+        { q: "Baca perkataan: konstruktif", a: "konstruktif", opts: ['konstruktif', 'onstruktif', 'struktif', 'ruktif'] },
+        { q: "Baca perkataan: komprehensif", a: "komprehensif", opts: ['komprehensif', 'omprehens', 'mprehens', 'mpreh'] },
+        { q: "Baca perkataan: konkurensi", a: "konkurensi", opts: ['konkurensi', 'onkurensi', 'kurensi', 'konsen'] },
+        { q: "Baca perkataan: kontradiksi", a: "kontradiksi", opts: ['kontradiksi', 'ontradik', 'tradiksi', 'ntrak'] },
+        { q: "Baca perkataan: konsentrasi", a: "konsentrasi", opts: ['konsentrasi', 'onsentri', 'sentri', 'sen'] },
+        { q: "Baca perkataan: komposisi", a: "komposisi", opts: ['komposisi', 'omposisi', 'mposisi', 'posisi'] },
+        { q: "Baca perkataan: konfrontasi", a: "konfrontasi", opts: ['konfrontasi', 'onfronta', 'fronta', 'ont'] },
+        { q: "Baca perkataan: konsistensi", a: "konsistensi", opts: ['konsistensi', 'onsisten', 'istensi', 'nsten'] },
+        { q: "Baca perkataan: kontribusi", a: "kontribusi", opts: ['kontribusi', 'ontribus', 'ntribusi', 'tribusi'] },
+        { q: "Baca perkataan: komprehensif", a: "komprehensif", opts: ['komprehensif', 'omprehens', 'mprehens', 'mpreh'] },
+        { q: "Baca perkataan: komuniti", a: "komuniti", opts: ['komuniti', 'omuniti', 'mun', 'niti'] },
+        { q: "Baca perkataan: konflik", a: "konflik", opts: ['konflik', 'onflik', 'flik', 'nflik'] },
+        { q: "Baca perkataan: konformasi", a: "konformasi", opts: ['konformasi', 'onform', 'formasi', 'formas'] },
+        { q: "Baca perkataan: konsultan", a: "konsultan", opts: ['konsultan', 'onsultan', 'sultan', 'n'] },
+        { q: "Baca perkataan: konklusi", a: "konklusi", opts: ['konklusi', 'onklusi', 'nklusi', 'klusi'] },
+
+        // Syllable identification
+        { q: "Perkataan 'kontraksi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'komprehensif' ada berapa suku kata?", a: "4", opts: ['4', '3', '5', '2'] },
+        { q: "Perkataan 'komplementari' ada berapa suku kata?", a: "4", opts: ['4', '3', '5', '2'] },
+        { q: "Perkataan 'konspirasi' ada berapa suku kata?", a: "4", opts: ['4', '3', '5', '2'] },
+        { q: "Perkataan 'komitmen' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'kontinjen' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'konstruktif' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'konkurensi' ada berapa suku kata?", a: "4", opts: ['4', '3', '5', '2'] },
+        { q: "Perkataan 'kontradiksi' ada berapa suku kata?", a: "4", opts: ['4', '3', '5', '2'] },
+        { q: "Perkataan 'konsentrasi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+
+        // Syllable breakdown
+        { q: "Suku kata pertama 'kontraksi' ialah?", a: "kon", opts: ['kon', 'tra', 'ksi', 'kontra'] },
+        { q: "Suku kata kedua 'kontraksi' ialah?", a: "tra", opts: ['tra', 'kon', 'ksi', 'kontra'] },
+        { q: "Suku kata ketiga 'kontraksi' ialah?", a: "ksi", opts: ['ksi', 'kon', 'tra', 'kontra'] },
+        { q: "Suku kata pertama 'komprehensif' ialah?", a: "kom", opts: ['kom', 'pre', 'hen', 'sif'] },
+        { q: "Suku kata kedua 'komprehensif' ialah?", a: "pre", opts: ['pre', 'kom', 'hen', 'sif'] },
+        { q: "Suku kata ketiga 'komprehensif' ialah?", a: "hen", opts: ['hen', 'kom', 'pre', 'sif'] },
+        { q: "Suku kata keempat 'komprehensif' ialah?", a: "sif", opts: ['sif', 'kom', 'pre', 'hen'] },
+        { q: "Suku kata pertama 'komplementari' ialah?", a: "kom", opts: ['kom', 'ple', 'men', 'tari'] },
+        { q: "Suku kata kedua 'komplementari' ialah?", a: "ple", opts: ['ple', 'kom', 'men', 'tari'] },
+        { q: "Suku kata ketiga 'komplementari' ialah?", a: "men", opts: ['men', 'kom', 'ple', 'tari'] },
+        { q: "Suku kata keempat 'komplementari' ialah?", a: "tari", opts: ['tari', 'kom', 'ple', 'men'] },
+
+        // Pattern recognition
+        { q: "Perkataan 'kontraksi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'komprehensif' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'komplementari' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'konspirasi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'komitmen' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Suku kata 'kon' dalam 'kontraksi' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'tra' dalam 'kontraksi' ialah corak?", a: "V", opts: ['V', 'KVKK', 'KV', 'KVK'] },
+        { q: "Suku kata 'ksi' dalam 'kontraksi' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'kom' dalam 'komprehensif' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'pre' dalam 'komprehensif' ialah corak?", a: "V + KV", opts: ['V + KV', 'KVKK', 'KV', 'KVK'] },
+        { q: "Suku kata 'hen' dalam 'komprehensif' ialah corak?", a: "V + KV", opts: ['V + KV', 'KVKK', 'KV', 'KVK'] },
+        { q: "Suku kata 'sif' dalam 'komprehensif' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+
+        // Missing syllable
+        { q: "___ + tra + ksi = kontraksi", a: "kon", opts: ['kon', 'tra', 'ksi', 'kontra'] },
+        { q: "kon + ___ + ksi = kontraksi", a: "tra", opts: ['tra', 'kon', 'ksi', 'kontra'] },
+        { q: "kon + tra + ___ = kontraksi", a: "ksi", opts: ['ksi', 'kon', 'tra', 'kontra'] },
+        { q: "___ + pre + hen + sif = komprehensif", a: "kom", opts: ['kom', 'pre', 'hen', 'sif'] },
+        { q: "kom + ___ + hen + sif = komprehensif", a: "pre", opts: ['pre', 'kom', 'hen', 'sif'] },
+        { q: "kom + pre + ___ + sif = komprehensif", a: "hen", opts: ['hen', 'kom', 'pre', 'sif'] },
+        { q: "kom + pre + hen + ___ = komprehensif", a: "sif", opts: ['sif', 'kom', 'pre', 'hen'] },
+        { q: "___ + ple + men + tari = komplementari", a: "kom", opts: ['kom', 'ple', 'men', 'tari'] },
+        { q: "kom + ___ + men + tari = komplementari", a: "ple", opts: ['ple', 'kom', 'men', 'tari'] },
+        { q: "kom + ple + ___ + tari = komplementari", a: "men", opts: ['men', 'kom', 'ple', 'tari'] },
+        { q: "kom + ple + men + ___ = komplementari", a: "tari", opts: ['tari', 'kom', 'ple', 'men'] },
+
+        // Word completion
+        { q: "kon + tra + ksi = ?", a: "kontraksi", opts: ['kontraksi', 'ontrakasi', 'trakasi', 'ntrak'] },
+        { q: "kom + pre + hen + sif = ?", a: "komprehensif", opts: ['komprehensif', 'omprehens', 'mprehens', 'mpreh'] },
+        { q: "kom + ple + men + tari = ?", a: "komplementari", opts: ['komplementari', 'omplementa', 'mplement', 'plem'] },
+        { q: "kon + spi + ra + si = ?", a: "konspirasi", opts: ['konspirasi', 'onspirasi', 'nspirasi', 'spirasi'] },
+        { q: "kom + it + men = ?", a: "komitmen", opts: ['komitmen', 'omitmen', 'mitmen', 'tmen'] },
+        { q: "kon + tin + jen = ?", a: "kontinjen", opts: ['kontinjen', 'ontinje', 'tinjen', 'nkonti'] },
+        { q: "kon + struk + tif = ?", a: "konstruktif", opts: ['konstruktif', 'onstruktif', 'struktif', 'ruktif'] },
+        { q: "kom + ku + ren + si = ?", a: "konkurensi", opts: ['konkurensi', 'onkurens', 'kurensi', 'konsen'] },
+        { q: "kon + tra + di + ki = ?", a: "kontradiksi", opts: ['kontradiksi', 'ontradik', 'tradiksi', 'ntrak'] },
+        { q: "kon + sen + tra + si = ?", a: "konsentrasi", opts: ['konsentrasi', 'onsentri', 'sentri', 'sen'] },
+
+        // Additional KVKK + V + KVKK words
+        { q: "Baca perkataan: komposisi", a: "komposisi", opts: ['komposisi', 'omposisi', 'mposisi', 'posisi'] },
+        { q: "Baca perkataan: konfrontasi", a: "konfrontasi", opts: ['konfrontasi', 'onfronta', 'fronta', 'ont'] },
+        { q: "Baca perkataan: konsistensi", a: "konsistensi", opts: ['konsistensi', 'onsisten', 'istensi', 'nsten'] },
+        { q: "Baca perkataan: kontribusi", a: "kontribusi", opts: ['kontribusi', 'ontribus', 'ntribusi', 'tribusi'] },
+        { q: "Baca perkataan: komuniti", a: "komuniti", opts: ['komuniti', 'omuniti', 'mun', 'niti'] },
+        { q: "Baca perkataan: konflik", a: "konflik", opts: ['konflik', 'onflik', 'flik', 'nflik'] },
+        { q: "Baca perkataan: konformasi", a: "konformasi", opts: ['konformasi', 'onform', 'formasi', 'formas'] },
+        { q: "Baca perkataan: konsultan", a: "konsultan", opts: ['konsultan', 'onsultan', 'sultan', 'n'] },
+        { q: "Baca perkataan: konklusi", a: "konklusi", opts: ['konklusi', 'onklusi', 'nklusi', 'klusi'] },
+        { q: "Baca perkataan: konversi", a: "konversi", opts: ['konversi', 'onversi', 'versi', 'nver'] },
+        { q: "Baca perkataan: konfirm", a: "konfirm", opts: ['konfirm', 'onfirm', 'firm', 'kon'] },
+        { q: "Baca perkataan: konsekuens", a: "konsekuens", opts: ['konsekuens', 'onsekuens', 'sekuens', 'nseku'] },
+        { q: "Baca perkataan: konfeksi", a: "konfeksi", opts: ['konfeksi', 'onfeksi', 'feksi', 'nfe'] },
+        { q: "Baca perkataan: kontrak", a: "kontrak", opts: ['kontrak', 'ontrakk', 'trakon', 'akkontr'] },
+        { q: "Baca perkataan: kontek", a: "kontek", opts: ['kontek', 'ontekk', 'tekkon', 'kkonte'] },
+
+        // More syllable work
+        { q: "Perkataan 'komposisi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'konfrontasi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'konsistensi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'kontribusi' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Perkataan 'komuniti' ada berapa suku kata?", a: "3", opts: ['3', '2', '4', '1'] },
+        { q: "Suku kata pertama 'komposisi' ialah?", a: "kom", opts: ['kom', 'po', 'si', 'komp'] },
+        { q: "Suku kata kedua 'komposisi' ialah?", a: "po", opts: ['po', 'kom', 'si', 'komp'] },
+        { q: "Suku kata ketiga 'komposisi' ialah?", a: "si", opts: ['si', 'kom', 'po', 'komp'] },
+        { q: "Suku kata pertama 'konfrontasi' ialah?", a: "kon", opts: ['kon', 'fro', 'n', 'konf'] },
+        { q: "Suku kata kedua 'konfrontasi' ialah?", a: "fro", opts: ['fro', 'kon', 'n', 'konf'] },
+        { q: "Suku kata ketiga 'konfrontasi' ialah?", a: "n", opts: ['n', 'kon', 'fro', 'konf'] },
+
+        // More pattern work
+        { q: "Perkataan 'komposisi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'konfrontasi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'konsistensi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'kontribusi' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Perkataan 'komuniti' mengikut corak?", a: "KVKK + V + KVKK", opts: ['KVKK + V + KVKK', 'KV + V + KVKK + KV', 'KVKK + KV + V + KV', 'V + KVKK + KVKK'] },
+        { q: "Suku kata 'kom' dalam 'komposisi' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'po' dalam 'komposisi' ialah corak?", a: "V", opts: ['V', 'KVKK', 'KV', 'KVK'] },
+        { q: "Suku kata 'si' dalam 'komposisi' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'kon' dalam 'konfrontasi' ialah corak?", a: "KVKK", opts: ['KVKK', 'KV', 'V', 'KVK'] },
+        { q: "Suku kata 'fro' dalam 'konfrontasi' ialah corak?", a: "V + KV", opts: ['V + KV', 'KVKK', 'KV', 'KVK'] },
+        { q: "Suku kata 'n' dalam 'konfrontasi' ialah corak?", a: "V", opts: ['V', 'KVKK', 'KV', 'KVK'] },
+
+        // More missing syllable work
+        { q: "___ + po + si = komposisi", a: "kom", opts: ['kom', 'po', 'si', 'komp'] },
+        { q: "kom + ___ + si = komposisi", a: "po", opts: ['po', 'kom', 'si', 'komp'] },
+        { q: "kom + po + ___ = komposisi", a: "si", opts: ['si', 'kom', 'po', 'komp'] },
+        { q: "___ + fro + n = konfrontasi", a: "kon", opts: ['kon', 'fro', 'n', 'konf'] },
+        { q: "kon + ___ + n = konfrontasi", a: "fro", opts: ['fro', 'kon', 'n', 'konf'] },
+        { q: "kon + fro + ___ = konfrontasi", a: "n", opts: ['n', 'kon', 'fro', 'konf'] },
+        { q: "___ + sis + ten = konsistensi", a: "kon", opts: ['kon', 'sis', 'ten', 'konsis'] },
+        { q: "kon + ___ + ten = konsistensi", a: "sis", opts: ['sis', 'kon', 'ten', 'konsis'] },
+        { q: "kon + sis + ___ = konsistensi", a: "ten", opts: ['ten', 'kon', 'sis', 'konsis'] },
+        { q: "___ + tri + bu = kontribusi", a: "kon", opts: ['kon', 'tri', 'bu', 'kontr'] },
+        { q: "kon + ___ + bu = kontribusi", a: "tri", opts: ['tri', 'kon', 'bu', 'kontr'] },
+        { q: "kon + tri + ___ = kontribusi", a: "bu", opts: ['bu', 'kon', 'tri', 'kontr'] },
+
+        // More word completion
+        { q: "kom + po + si = ?", a: "komposisi", opts: ['komposisi', 'omposisi', 'mposisi', 'posisi'] },
+        { q: "kon + fro + n = ?", a: "konfrontasi", opts: ['konfrontasi', 'onfronta', 'fronta', 'ont'] },
+        { q: "kon + sis + ten = ?", a: "konsistensi", opts: ['konsistensi', 'onsisten', 'istensi', 'nsten'] },
+        { q: "kon + tri + bu = ?", a: "kontribusi", opts: ['kontribusi', 'ontribus', 'ntribusi', 'tribusi'] },
+        { q: "ko + mu + ni + ti = ?", a: "komuniti", opts: ['komuniti', 'omuniti', 'mun', 'niti'] },
+        { q: "kon + flik = ?", a: "konflik", opts: ['konflik', 'onflik', 'flik', 'nflik'] },
+        { q: "kon + for + ma + si = ?", a: "konformasi", opts: ['konformasi', 'onform', 'formasi', 'formas'] },
+        { q: "kon + sul + tan = ?", a: "konsultan", opts: ['konsultan', 'onsultan', 'sultan', 'n'] },
+        { q: "kon + klu + si = ?", a: "konklusi", opts: ['konklusi', 'onklusi', 'nklusi', 'klusi'] },
+        { q: "kon + ver + si = ?", a: "konversi", opts: ['konversi', 'onversi', 'versi', 'nver'] },
+        { q: "kon + firm = ?", a: "konfirm", opts: ['konfirm', 'onfirm', 'firm', 'kon'] },
+
+        // Application questions
+        { q: "Kontraksi ialah?", a: "perjanjian", opts: ['perjanjian', 'kerja', 'main', 'belajar'] },
+        { q: "Komprehensif ialah?", a: "faham", opts: ['faham', 'tidak faham', 'sangat faham', 'kurang faham'] },
+        { q: "Komplementari ialah?", a: "melengkapkan", opts: ['melengkapkan', 'mengurangkan', 'membuang', 'menghapus'] },
+        { q: "Konspirasi ialah?", a: "rancang", opts: ['rancang', 'kerja', 'main', 'belajar'] },
+        { q: "Komitmen ialah?", a: "komitmen", opts: ['komitmen', 'tidak komitmen', 'kerja keras', 'bekerja'] },
+        { q: "Kontinjen ialah?", a: "berterusan", opts: ['berterusan', 'berhenti', 'maju', 'mundur'] },
+        { q: "Konstruktif ialah?", a: "bina", opts: ['bina', 'rosak', 'cantik', 'buruk'] },
+        { q: "Konkurensi ialah?", a: "bersaing", opts: ['bersaing', 'setuju', 'tidak setuju', 'saling bantu'] },
+        { q: "Kontradiksi ialah?", a: "berlawanan", opts: ['berlawanan', 'sama', 'serupa', 'berbeza'] },
+        { q: "Konsentrasi ialah?", a: "tumpuan", opts: ['tumpuan', "tersebar", 'tidak fokus', 'sambil main'] },
+        { q: "Komposisi ialah?", a: "kedudukan", opts: ['kedudukan', 'gerakan', 'warna', 'bentuk'] },
+        { q: "Konfrontasi ialah?", a: "berhadapan", opts: ['berhadapan', 'bersembunyi', 'berbaik', 'bertentang'] },
+        { q: "Konsistensi ialah?", a: "tetap", opts: ['tetap', 'berubah', 'tidak tetap', 'selalu berubah'] },
+        { q: "Kontribusi ialah?", a: "sumbangan", opts: ['sumbangan', 'penerimaan', 'pengambilan', 'pemberian'] },
+        { q: "Komuniti ialah?", a: "kumpulan", opts: ['kumpulan', 'individu', 'keluarga', 'jiran'] },
+        { q: "Konflik ialah?", a: "perbalasan", opts: ['perbalasan', 'persetujuan', 'keamanan', 'perdamai'] },
+        { q: "Konformasi ialah?", a: "sua", opts: ['sua', "tidak suka", 'berubah', 'tetap'] },
+        { q: "Konsultan ialah?", a: "pakar", opts: ['pakar', 'murid', 'guru', 'penolong'] },
+        { q: "Konklusi ialah?", a: "hasil", opts: ['hasil', 'permulaan', 'proses', 'masalah'] },
+
+        // Pattern matching
+        { q: "Antara berikut, yang manakah corak KVKK + V + KVKK?", a: "kontraksi", opts: ['kontraksi', 'bola', 'meja', 'buku'] },
+        { q: "Antara berikut, yang manakah corak KVKK + V + KVKK?", a: "komprehensif", opts: ['komprehensif', 'rumah', 'saya', 'guru'] },
+        { q: "Antara berikut, yang manakah corak KVKK + V + KVKK?", a: "komplementari", opts: ['komplementari', 'api', 'air', 'guru'] },
+        { q: "Antara berikut, yang manakah corak KVKK + V + KVKK?", a: "konspirasi", opts: ['konspirasi', 'bola', 'meja', 'buku'] },
+        { q: "Antara berikut, yang manakah corak KVKK + V + KVKK?", a: "komitmen", opts: ['komitmen', 'rumah', 'saya', 'guru'] },
+        { q: "Antara berikut, yang manakah BUKAN corak KVKK + V + KVKK?", a: "bola", opts: ['bola', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Antara berikut, yang manakah BUKAN corak KVKK + V + KVKK?", a: "rumah", opts: ['rumah', 'konspirasi', 'komitmen', 'kontinjen'] },
+        { q: "Antara berikut, yang manakah BUKAN corak KVKK + V + KVKK?", a: "meja", opts: ['meja', 'konstruktif', 'konkurensi', 'kontradiksi'] },
+        { q: "Antara berikut, yang manakah BUKAN corak KVKK + V + KVKK?", a: "buku", opts: ['buku', 'konsentrasi', 'komposisi', 'konfrontasi'] },
+        { q: "Antara berikut, yang manakah BUKAN corak KVKK + V + KVKK?", a: "saya", opts: ['saya', 'konsistensi', 'kontribusi', 'komuniti'] },
+
+        // Sound patterns
+        { q: "Perkataan dengan 'kon' di awal?", a: "kontraksi", opts: ['kontraksi', 'komprehensif', 'komplementari', 'konspirasi'] },
+        { q: "Perkataan dengan 'kom' di awal?", a: "komprehensif", opts: ['komprehensif', 'kontraksi', 'komplementari', 'konspirasi'] },
+        { q: "Perkataan dengan 'kom' di awal?", a: "komplementari", opts: ['komplementari', 'kontraksi', 'komprehensif', 'konspirasi'] },
+        { q: "Perkataan dengan 'kon' di awal?", a: "konspirasi", opts: ['konspirasi', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Perkataan dengan 'kom' di awal?", a: "komitmen", opts: ['komitmen', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Perkataan dengan 'tra' di tengah?", a: "kontraksi", opts: ['kontraksi', 'komprehensif', 'komplementari', 'konspirasi'] },
+        { q: "Perkataan dengan 'pre' di tengah?", a: "komprehensif", opts: ['komprehensif', 'kontraksi', 'komplementari', 'konspirasi'] },
+        { q: "Perkataan dengan 'ple' di tengah?", a: "komplementari", opts: ['komplementari', 'kontraksi', 'komprehensif', 'konspirasi'] },
+        { q: "Perkataan dengan 'spi' di tengah?", a: "konspirasi", opts: ['konspirasi', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Perkataan dengan 'it' di tengah?", a: "komitmen", opts: ['komitmen', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Perkataan dengan 'en' di akhir?", a: "komprehensif", opts: ['komprehensif', 'kontraksi', 'komplementari', 'konspirasi'] },
+
+        // More complex KVKK + V + KVKK words
+        { q: "Baca perkataan: konsekuens", a: "konsekuens", opts: ['konsekuens', 'onsekuens', 'sekuens', 'nseku'] },
+        { q: "Baca perkataan: konfeksi", a: "konfeksi", opts: ['konfeksi', 'onfeksi', 'feksi', 'nfe'] },
+        { q: "Baca perkataan: kontrak", a: "kontrak", opts: ['kontrak', 'ontrakk', 'trakon', 'akkontr'] },
+        { q: "Baca perkataan: kontek", a: "kontek", opts: ['kontek', 'ontekk', 'tekkon', 'kkonte'] },
+        { q: "Baca perkataan: konsept", a: "konsept", opts: ['konsept', 'onsept', 'sept', 'kon'] },
+        { q: "Baca perkataan: konduktif", a: "konduktif", opts: ['konduktif', 'onduktif', 'duktif', 'dukti'] },
+        { q: "Baca perkataan: konduktor", a: "konduktor", opts: ['konduktor', 'ondutor', 'duktor', 'dukt'] },
+        { q: "Baca perkataan: konektiviti", a: "konektiviti", opts: ['konektiviti', 'onektivit', 'nektiviti', 'tiviti'] },
+        { q: "Baca perkataan: konsumen", a: "konsumen", opts: ['konsumen', 'onsumen', 'sumen', 'nsu'] },
+        { q: "Baca perkataan: konversyen", a: "konversyen", opts: ['konversyen', 'onversye', 'versyen', 'nvers'] },
+        { q: "Baca perkataan: konvokesyen", a: "konvokesyen", opts: ['konvokesyen', 'onvokesy', 'vokesyen', 'nvokes'] },
+
+        // Final review questions
+        { q: "Manakah antara berikut adalah perkataan KVKK + V + KVKK?", a: "kontraksi", opts: ['kontraksi', 'bola', 'meja', 'buku'] },
+        { q: "Manakah antara berikut adalah perkataan KVKK + V + KVKK?", a: "komprehensif", opts: ['komprehensif', 'rumah', 'saya', 'guru'] },
+        { q: "Manakah antara berikut adalah perkataan KVKK + V + KVKK?", a: "komplementari", opts: ['komplementari', 'api', 'air', 'guru'] },
+        { q: "Manakah antara berikut adalah perkataan KVKK + V + KVKK?", a: "konspirasi", opts: ['konspirasi', 'bola', 'meja', 'buku'] },
+        { q: "Manakah antara berikut adalah perkataan KVKK + V + KVKK?", a: "komitmen", opts: ['komitmen', 'rumah', 'saya', 'guru'] },
+        { q: "Manakah antara berikut BUKAN perkataan KVKK + V + KVKK?", a: "bola", opts: ['bola', 'kontraksi', 'komprehensif', 'komplementari'] },
+        { q: "Manakah antara berikut BUKAN perkataan KVKK + V + KVKK?", a: "rumah", opts: ['rumah', 'konspirasi', 'komitmen', 'kontinjen'] },
+        { q: "Manakah antara berikut BUKAN perkataan KVKK + V + KVKK?", a: "meja", opts: ['meja', 'konstruktif', 'konkurensi', 'kontradiksi'] },
+        { q: "Manakah antara berikut BUKAN perkataan KVKK + V + KVKK?", a: "buku", opts: ['buku', 'konsentrasi', 'komposisi', 'konfrontasi'] },
+        { q: "Manakah antara berikut BUKAN perkataan KVKK + V + KVKK?", a: "saya", opts: ['saya', 'konsistensi', 'kontribusi', 'komuniti'] }
+    ]
+};
+
+export default BM_KP32;
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = BM_KP32;
+}
+
+if (typeof globalThis !== 'undefined') {
+    globalThis.BM_KP32 = BM_KP32;
+}
