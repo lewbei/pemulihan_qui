@@ -30,9 +30,23 @@ try {
     if (platform === 'darwin') {
         // macOS - Create .command file (executable script)
         const shortcutPath = path.join(desktopDir, 'Kuiz Adventure.command');
+        const kuizPath = path.join(npmBin, 'kuiz-adventure');
         const shortcutContent = `#!/bin/bash
+# Kuiz Adventure MEGA Launcher
 echo "🎮 Starting Kuiz Adventure MEGA..."
-${path.join(npmBin, 'kuiz-adventure')}
+echo ""
+
+# Try to find and run kuiz-adventure
+if [ -x "${kuizPath}" ]; then
+    "${kuizPath}"
+elif command -v kuiz-adventure &> /dev/null; then
+    kuiz-adventure
+else
+    echo "❌ Error: kuiz-adventure not found!"
+    echo "Please run: npm install -g kuiz-adventure-mega"
+    echo ""
+    read -p "Press Enter to close..."
+fi
 `;
         
         try {
@@ -48,8 +62,17 @@ ${path.join(npmBin, 'kuiz-adventure')}
         // Windows - Create .bat file
         const shortcutPath = path.join(desktopDir, 'Kuiz Adventure.bat');
         const shortcutContent = `@echo off
+title Kuiz Adventure MEGA
 echo Starting Kuiz Adventure MEGA...
+echo.
 call kuiz-adventure
+if errorlevel 1 (
+    echo.
+    echo Error: kuiz-adventure not found!
+    echo Please run: npm install -g kuiz-adventure-mega
+    echo.
+    pause
+)
 `;
         
         try {
