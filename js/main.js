@@ -121,7 +121,10 @@ async function startSession(category, difficulty, skillId, difficultyLabel) {
     const level = Number(difficulty) || 1;
     const levelLabel = difficultyLabel || `Tahap ${level}`;
     let questions = [];
-    if (category === 'bm' && skillId) {
+    // Load KP module questions for ANY category when a specific skill is chosen.
+    // Previously this was limited to BM only, causing math KP selections (e.g. math-kp1)
+    // to return zero questions and trigger the 'Soalan tidak mencukupi...' toast.
+    if (skillId) {
         try {
             questions = await fetchKPQuestionSet(skillId, level, 10, category);
         } catch (error) {
