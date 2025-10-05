@@ -31,23 +31,44 @@ try {
         // macOS - Create .command file (executable script)
         const shortcutPath = path.join(desktopDir, 'Kuiz Adventure.command');
         const kuizPath = path.join(npmBin, 'kuiz-adventure');
-        const shortcutContent = `#!/bin/bash
-# Kuiz Adventure MEGA Launcher
-echo "🎮 Starting Kuiz Adventure MEGA..."
-echo ""
-
-# Try to find and run kuiz-adventure
-if [ -x "${kuizPath}" ]; then
-    "${kuizPath}"
-elif command -v kuiz-adventure &> /dev/null; then
-    kuiz-adventure
-else
-    echo "❌ Error: kuiz-adventure not found!"
-    echo "Please run: npm install -g kuiz-adventure-mega"
-    echo ""
-    read -p "Press Enter to close..."
-fi
-`;
+                const shortcutLines = [
+                        '#!/bin/bash',
+                        '# Kuiz Adventure MEGA Launcher',
+                        'echo "🎮 Starting Kuiz Adventure MEGA..."',
+                        'echo ""',
+                        '# Load user shell environment profiles',
+                        '[ -f "$HOME/.zprofile" ] && source "$HOME/.zprofile"',
+                        '[ -f "$HOME/.zshrc" ] && source "$HOME/.zshrc"',
+                        '[ -f "$HOME/.bash_profile" ] && source "$HOME/.bash_profile"',
+                        '[ -f "$HOME/.profile" ] && source "$HOME/.profile"',
+                        '',
+                        '# Append common global npm locations if missing',
+                        'for d in /usr/local/bin /opt/homebrew/bin "$HOME/.npm-global/bin" "$HOME/.node/bin"; do',
+                        '  [ -d "$d" ] && case ":$PATH:" in *":$d:"*) ;; *) PATH="$d:$PATH" ;; esac',
+                        'done',
+                        'export PATH',
+                        '',
+                        'echo "🔍 Searching for kuiz-adventure..."',
+                        `TARGET_PATH="${kuizPath}"`,
+                        'if [ -x "$TARGET_PATH" ]; then',
+                        '  echo "✓ Using direct path: $TARGET_PATH"',
+                        '  "$TARGET_PATH"',
+                        'elif command -v kuiz-adventure >/dev/null 2>&1; then',
+                        '  RESOLVED=$(command -v kuiz-adventure)',
+                        '  echo "✓ Found in PATH: $RESOLVED"',
+                        '  "$RESOLVED"',
+                        'else',
+                        '  echo "❌ Error: kuiz-adventure not found"',
+                        '  echo "Tried direct path: $TARGET_PATH"',
+                        '  echo "PATH: $PATH"',
+                        '  echo "Fix suggestions:"',
+                        '  echo "  1. Reinstall globally: npm install -g kuiz-adventure-mega"',
+                        '  echo "  2. Ensure your global npm bin is in PATH"',
+                        '  echo "  3. If using nvm, open a terminal and run: kuiz-adventure"',
+                        '  read -p "Press Enter to close..."',
+                        'fi'
+                ];
+                const shortcutContent = shortcutLines.join('\n');
         
         try {
             fs.writeFileSync(shortcutPath, shortcutContent, { mode: 0o755 });

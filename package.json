@@ -1,6 +1,6 @@
 {
   "name": "kuiz-adventure-mega",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "3+ Years of Educational Quizzes for Malaysian Primary School Students",
   "main": "serve.js",
   "type": "module",
