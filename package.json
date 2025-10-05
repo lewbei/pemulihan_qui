@@ -1,0 +1,76 @@
+{
+  "name": "kuiz-adventure-mega",
+  "version": "1.0.1",
+  "description": "3+ Years of Educational Quizzes for Malaysian Primary School Students",
+  "main": "serve.js",
+  "type": "module",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js",
+    "build": "npm run build-js && npm run build-css",
+    "build-js": "echo 'No JavaScript build step needed - using vanilla ES6 modules'",
+    "build-css": "echo 'No CSS build step needed - using vanilla CSS'",
+    "serve": "node serve.js",
+    "test": "echo 'No tests specified yet' && exit 0",
+    "lint": "echo 'No linting configured yet' && exit 0",
+    "install:global": "npm install -g .",
+    "create-symlink": "npm link",
+    "postinstall": "node scripts/postinstall.js"
+  },
+  "keywords": [
+    "education",
+    "quiz",
+    "malaysia",
+    "primary-school",
+    "learning",
+    "bahasa-malaysia",
+    "mathematics",
+    "pwa",
+    "offline"
+  ],
+  "author": "Kuiz Adventure Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "compression": "^1.7.4",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "jest": "^29.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewbei/pemulihan_qui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lewbei/pemulihan_qui/issues"
+  },
+  "homepage": "https://github.com/lewbei/pemulihan_qui#readme",
+  "bin": {
+    "kuiz-adventure": "./serve.js"
+  },
+  "files": [
+    "kuiz_game.html",
+    "index.html",
+    "kuiz-styles.css",
+    "manifest.json",
+    "serve.js",
+    "js/",
+    "scripts/",
+    "kp/",
+    "assets/",
+    "service-worker.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "preferGlobal": false,
+  "private": false
+}
