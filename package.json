@@ -71,6 +71,6 @@
     "README.md",
     "LICENSE"
   ],
-  "preferGlobal": false,
+  "preferGlobal": true,
   "private": false
 }

@@ -10,6 +10,21 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const ROOT_DIR = __dirname;
 
+// Debug: Show where we're serving from
+console.log(`📂 Serving files from: ${ROOT_DIR}`);
+
+// Check if required files exist
+const requiredFiles = ['kuiz_game.html', 'index.html', 'kuiz-styles.css'];
+const missingFiles = requiredFiles.filter(file => !fs.existsSync(path.join(ROOT_DIR, file)));
+
+if (missingFiles.length > 0) {
+    console.error(`\n❌ Error: Missing required files in ${ROOT_DIR}:`);
+    missingFiles.forEach(file => console.error(`   - ${file}`));
+    console.error(`\nThis usually means the package wasn't installed correctly.`);
+    console.error(`Try reinstalling: npm install -g kuiz-adventure-mega\n`);
+    process.exit(1);
+}
+
 const MIME_TYPES = {
     '.html': 'text/html; charset=UTF-8',
     '.js': 'text/javascript; charset=UTF-8',
