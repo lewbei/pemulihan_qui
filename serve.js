@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
@@ -89,5 +90,41 @@ function streamFile(filePath, res) {
 }
 
 server.listen(PORT, () => {
-    console.log(`KP Quiz available at http://localhost:${PORT}/kuiz_game.html`);
+    console.log(`\n✓ Kuiz Adventure MEGA server started successfully!`);
+    console.log(`\n📚 Access the quiz at:`);
+    console.log(`   → http://localhost:${PORT}/kuiz_game.html`);
+    console.log(`   → http://localhost:${PORT}`);
+    console.log(`\n💡 Press Ctrl+C to stop the server\n`);
+});
+
+// Graceful shutdown handling
+const shutdown = (signal) => {
+    console.log(`\n\n⚠️  Received ${signal}. Shutting down gracefully...`);
+    server.close(() => {
+        console.log('✓ Server closed. All connections terminated.');
+        console.log('👋 Goodbye!\n');
+        process.exit(0);
+    });
+
+    // Force close after 10 seconds if graceful shutdown fails
+    setTimeout(() => {
+        console.error('⚠️  Forcefully shutting down...');
+        process.exit(1);
+    }, 10000);
+};
+
+// Handle different termination signals
+process.on('SIGTERM', () => shutdown('SIGTERM'));
+process.on('SIGINT', () => shutdown('SIGINT'));
+
+// Handle uncaught errors
+process.on('uncaughtException', (error) => {
+    console.error('\n❌ Uncaught Exception:', error.message);
+    console.error(error.stack);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('\n❌ Unhandled Rejection at:', promise, 'reason:', reason);
+    process.exit(1);
 });

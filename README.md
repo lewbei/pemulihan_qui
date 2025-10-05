@@ -13,27 +13,69 @@
 
 ## Installation
 
+### Quick Install (Global)
+
+Install globally to use anywhere on your system:
+
+```bash
+npm install -g kuiz-adventure-mega
+kuiz-adventure
+```
+
+Then open your browser to `http://localhost:8000`
+
 ### Prerequisites
 - Node.js 14.0.0 or higher
 - npm (usually comes with Node.js)
 
-### Install and Run
+### Platform-Specific Setup
+
+#### Windows
+1. Open **Command Prompt (cmd.exe)** (not PowerShell)
+2. Navigate to your project directory
+3. Run the commands below
+
+#### macOS/Linux
+1. Open **Terminal**
+2. Navigate to your project directory
+3. Run the commands below
+
+### Install and Run from Source
 
 1. **Clone or download this repository**
+   ```bash
+   git clone https://github.com/lewbei/pemulihan_qui.git
+   cd pemulihan_qui
+   ```
+
 2. **Install dependencies:**
    ```bash
    npm install
    ```
 
 3. **Start the application:**
+   
+   **Windows (cmd.exe):**
+   ```cmd
+   node serve.js
+   ```
+   
+   **macOS/Linux:**
    ```bash
    npm start
+   # or
+   node serve.js
    ```
 
 4. **Open your browser and navigate to:**
    ```
    http://localhost:8000/kuiz_game.html
    ```
+
+5. **Stop the server:**
+   - Press `Ctrl+C` in the terminal
+   - The server will shut down gracefully
+   - Closing the terminal window also stops the server
 
 ## Development
 
